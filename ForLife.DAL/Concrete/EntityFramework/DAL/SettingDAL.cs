@@ -11,5 +11,9 @@ namespace ForLife.DAL.Concrete.EntityFramework.DAL
 {
    public class SettingDAL : EFRepositoryBase<Setting, ForLifeDbContext>, ISettingDAL
     {
+        public SettingDAL(ForLifeDbContext db) : base(db)
+        {
+
+        }
     }
 }

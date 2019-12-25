@@ -11,5 +11,9 @@ namespace ForLife.DAL.Concrete.EntityFramework.DAL
 {
     public class DonationTypeDAL:EFRepositoryBase<DonationType,ForLifeDbContext>,IDonationTypeDAL
     {
+        public DonationTypeDAL(ForLifeDbContext db):base(db)
+        {
+
+        }
     }
 }

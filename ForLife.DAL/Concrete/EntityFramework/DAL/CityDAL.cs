@@ -11,5 +11,9 @@ namespace ForLife.DAL.Concrete.EntityFramework.DAL
 {
    public class CityDAL : EFRepositoryBase<City, ForLifeDbContext>, ICityDAL
     {
+        public CityDAL(ForLifeDbContext db) : base(db)
+        {
+
+        }
     }
 }

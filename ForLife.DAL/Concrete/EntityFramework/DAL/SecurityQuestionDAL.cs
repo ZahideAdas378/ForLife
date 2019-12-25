@@ -11,5 +11,9 @@ namespace ForLife.DAL.Concrete.EntityFramework.DAL
 {
    public class SecurityQuestionDAL : EFRepositoryBase<SecurityQuestion, ForLifeDbContext>, ISecurityQuestionDAL
     {
+        public SecurityQuestionDAL(ForLifeDbContext db) : base(db)
+        {
+
+        }
     }
 }

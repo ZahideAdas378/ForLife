@@ -10,6 +10,6 @@ namespace ForLife.DAL.Abstract
 {
    public interface IAdminDAL:IEntityRepository<Admin>
     {
-
+      
     }
 }

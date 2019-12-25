@@ -11,5 +11,9 @@ namespace ForLife.DAL.Concrete.EntityFramework.DAL
 {
     public class BloodGroupDAL : EFRepositoryBase<BloodGroup, ForLifeDbContext>, IBloodGroupDAL
     {
+        public BloodGroupDAL(ForLifeDbContext db) : base(db)
+        {
+
+        }
     }
 }

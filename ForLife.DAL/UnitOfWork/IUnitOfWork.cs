@@ -20,6 +20,8 @@ namespace ForLife.DAL.UnitOfWork
         IPatientDonorDAL PatientDonorDAL { get;}
         ISecurityQuestionDAL SecurityQuestionDAL { get;}
         ISettingDAL SettingDAL { get;}
+
+        int Complete();
         
     }
 }

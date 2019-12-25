@@ -11,5 +11,9 @@ namespace ForLife.DAL.Concrete.EntityFramework.DAL
 {
     public class AdminDAL : EFRepositoryBase<Admin, ForLifeDbContext>, IAdminDAL
     {
+        public AdminDAL(ForLifeDbContext db):base(db)
+        {
+            //Zahide
+        }
     }
 }

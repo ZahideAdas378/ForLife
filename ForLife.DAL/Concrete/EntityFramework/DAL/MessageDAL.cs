@@ -11,5 +11,9 @@ namespace ForLife.DAL.Concrete.EntityFramework.DAL
 {
    public class MessageDAL : EFRepositoryBase<Message, ForLifeDbContext>, IMessageDAL
     {
+        public MessageDAL(ForLifeDbContext db):base(db)
+        {
+
+        }
     }
 }

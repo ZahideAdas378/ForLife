@@ -14,9 +14,12 @@ namespace ForLife.CORE.DataAccess.EntityFramework
         where TContext : DbContext, new()
     {
         TContext tContext;
-        public EFRepositoryBase()
+        //private DbSet<TEntity> _dbSet;
+        //TODO//change
+        public EFRepositoryBase(TContext dbContext)
         {
-            tContext = new TContext();
+            tContext = dbContext;
+          //  _dbSet = tContext.Set<TEntity>();
         }
         public void Add(TEntity entity)
         {

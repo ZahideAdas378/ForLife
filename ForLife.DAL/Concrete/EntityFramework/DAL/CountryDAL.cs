@@ -11,5 +11,9 @@ namespace ForLife.DAL.Concrete.EntityFramework.DAL
 {
     public class CountryDAL : EFRepositoryBase<Country, ForLifeDbContext>, ICountryDAL
     {
+        public CountryDAL(ForLifeDbContext db) : base(db)
+        {
+
+        }
     }
 }
