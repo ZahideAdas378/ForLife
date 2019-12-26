@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace ForLife.DAL.Abstract
 {
-   public interface IAdminDAL:IEntityRepository<Admin>
+    public interface IAdminDAL : IEntityRepository<Admin>
     {
-      
+
     }
 }

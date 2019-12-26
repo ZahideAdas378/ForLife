@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForLife.DAL", "ForLife.DAL\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForLife.CORE", "ForLife.CORE\ForLife.CORE.csproj", "{5309F24F-EE87-45F1-81C9-6F7549048240}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForLife.BLL", "ForLife.BLL\ForLife.BLL.csproj", "{2E209790-1098-4160-AE98-3590DAB8E363}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForLife.BLL", "ForLife.BLL\ForLife.BLL.csproj", "{3E41646F-F44A-4626-ACDB-6EC2D235CBE5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,6 @@ Global
 		{5309F24F-EE87-45F1-81C9-6F7549048240}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5309F24F-EE87-45F1-81C9-6F7549048240}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5309F24F-EE87-45F1-81C9-6F7549048240}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2E209790-1098-4160-AE98-3590DAB8E363}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2E209790-1098-4160-AE98-3590DAB8E363}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2E209790-1098-4160-AE98-3590DAB8E363}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2E209790-1098-4160-AE98-3590DAB8E363}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
