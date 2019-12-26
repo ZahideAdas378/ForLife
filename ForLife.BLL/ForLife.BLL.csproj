@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -44,6 +44,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Concrete\AdminService.cs" />
+    <Compile Include="Concrete\BloodGroupService.cs" />
+    <Compile Include="Concrete\CityService.cs" />
+    <Compile Include="Concrete\CountryService.cs" />
+    <Compile Include="Concrete\DonationTypeService.cs" />
+    <Compile Include="Concrete\DonorService.cs" />
+    <Compile Include="Concrete\MessageService.cs" />
+    <Compile Include="Concrete\PatientService.cs" />
+    <Compile Include="Concrete\SecurityQuestionService.cs" />
+    <Compile Include="Concrete\SettingService.cs" />
     <Compile Include="IOC\Ninject\CustomDALModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
