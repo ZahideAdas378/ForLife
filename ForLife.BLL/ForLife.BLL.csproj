@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3E41646F-F44A-4626-ACDB-6EC2D235CBE5}</ProjectGuid>
+    <ProjectGuid>{DBC3477F-0FED-487F-B5C7-835793F7533A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ForLife.BLL</RootNamespace>
@@ -31,9 +31,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Ninject, Version=3.3.4.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
-      <HintPath>..\packages\Ninject.3.3.4\lib\net45\Ninject.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,30 +41,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Concrete\AdminService.cs" />
-    <Compile Include="Concrete\BloodGroupService.cs" />
-    <Compile Include="Concrete\CityService.cs" />
-    <Compile Include="Concrete\CountryService.cs" />
-    <Compile Include="Concrete\DonationTypeService.cs" />
-    <Compile Include="Concrete\DonorService.cs" />
-    <Compile Include="Concrete\MessageService.cs" />
-    <Compile Include="Concrete\PatientService.cs" />
-    <Compile Include="Concrete\SecurityQuestionService.cs" />
-    <Compile Include="Concrete\SettingService.cs" />
-    <Compile Include="IOC\Ninject\CustomDALModule.cs" />
+    <Compile Include="Abstract\IAdminService.cs" />
+    <Compile Include="Abstract\IBaseService.cs" />
+    <Compile Include="Abstract\IBloodGroupService.cs" />
+    <Compile Include="Abstract\ICityService.cs" />
+    <Compile Include="Abstract\ICountryService.cs" />
+    <Compile Include="Abstract\IDonationTypeService.cs" />
+    <Compile Include="Abstract\IDonorService.cs" />
+    <Compile Include="Abstract\IMessageService.cs" />
+    <Compile Include="Abstract\IPatientDonorService.cs" />
+    <Compile Include="Abstract\IPatientService.cs" />
+    <Compile Include="Abstract\ISecurityQuestionService.cs" />
+    <Compile Include="Abstract\ISettingService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
+    <ProjectReference Include="..\Entities.ForLife\Entities.ForLife.csproj">
+      <Project>{E6ACB0F3-72F2-482D-A3A4-48609F94278F}</Project>
+      <Name>Entities.ForLife</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ForLife.CORE\ForLife.CORE.csproj">
       <Project>{5309f24f-ee87-45f1-81c9-6f7549048240}</Project>
       <Name>ForLife.CORE</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ForLife.DAL\ForLife.DAL.csproj">
-      <Project>{f3bc0892-7d1e-4405-9b44-8fab0e5ba5cd}</Project>
-      <Name>ForLife.DAL</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
