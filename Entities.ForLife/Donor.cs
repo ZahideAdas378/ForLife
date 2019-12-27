@@ -16,10 +16,9 @@ namespace Entities.ForLife
             PatientDonors = new HashSet<PatientDonor>();
         }
         public int DonorID { get; set; }
-        public DateTime DonationDate { get; set; }
+        
 
-
-
+        
         public virtual BloodGroup BloodGroup { get; set; }
         public virtual City City { get; set; }
         public virtual ICollection<DonationType> DonationTypes { get; set; }

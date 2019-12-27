@@ -74,6 +74,7 @@
     <Compile Include="Concrete\EntityFramework\DAL\SecurityQuestionDAL.cs" />
     <Compile Include="Concrete\EntityFramework\DAL\SettingDAL.cs" />
     <Compile Include="Concrete\EntityFramework\ForLifeDbContext.cs" />
+    <Compile Include="Concrete\EntityFramework\ForLifeInitializer.cs" />
     <Compile Include="Concrete\EntityFramework\Mapping\AdminMapping.cs" />
     <Compile Include="Concrete\EntityFramework\Mapping\BloodGroupMapping.cs" />
     <Compile Include="Concrete\EntityFramework\Mapping\CityMapping.cs" />

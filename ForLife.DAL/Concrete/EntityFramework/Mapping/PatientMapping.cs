@@ -27,6 +27,10 @@ namespace ForLife.DAL.Concrete.EntityFramework.Mapping
                 .IsRequired()
                 .HasColumnType("bit");
 
+            Property(a => a.ContactChannel)
+           .IsRequired()
+           .HasMaxLength(70);
+
             Property(a => a.Photo)
                .IsRequired()
                .HasColumnType("image");

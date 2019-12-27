@@ -29,7 +29,7 @@ namespace ForLife.BLL.Concrete
 
         public List<Donor> FilterDonors(Country country, DonationType donationType, DateTime date)
         {
-            return  _dal.Get(a=>a.City.Country==country&&a.DonationTypes==donationType&&a.CreateDate==date).ToList();
+            return  _dal.GetAll(a=>a.City.Country==country&&a.DonationTypes==donationType&&a.DonationDate==date).ToList();
            
         }
 

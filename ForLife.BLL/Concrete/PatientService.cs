@@ -27,6 +27,12 @@ namespace ForLife.BLL.Concrete
             _dal.Delete(patient);
         }
 
+        public List<Patient> FilterPatients(Country country, DonationType donationType, DateTime date)
+        {
+            return _dal.GetAll(a => a.City.Country == country && a.DonationTypes == donationType && a.DonationDate == date).ToList();
+
+        }
+
         public Patient Get(int entityID)
         {
             return _dal.Get(a => a.PatientID == entityID);

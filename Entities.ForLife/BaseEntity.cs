@@ -30,6 +30,8 @@ namespace Entities.ForLife
         public string SecurityAnswer { get; set; }
         public int BloodGroupID { get; set; }
         public int DonationTypeID { get; set; }
+        public DateTime DonationDate { get; set; }
+        public string ContactChannel { get; set; }
 
     }
 }
