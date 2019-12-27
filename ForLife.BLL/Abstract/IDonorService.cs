@@ -9,5 +9,7 @@ namespace ForLife.BLL.Abstract
 {
    public interface IDonorService:IBaseService<Donor>
     {
+        List<Donor> FilterDonors(Country country, DonationType donationType, DateTime date);
+
     }
 }

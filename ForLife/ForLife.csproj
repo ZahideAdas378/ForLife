@@ -111,6 +111,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\" />
+    <Folder Include="IOC\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
