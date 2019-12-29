@@ -66,7 +66,7 @@
     <Compile Include="Concrete\DonorService.cs" />
     <Compile Include="Concrete\MessageService.cs" />
     <Compile Include="Concrete\PatientDonorService.cs" />
-    <Compile Include="Concrete\PatientProfileSettings.cs" />
+    <Compile Include="Concrete\PatientProfileSettingsService.cs" />
     <Compile Include="Concrete\PatientService.cs" />
     <Compile Include="Concrete\SecurityQuestionService.cs" />
     <Compile Include="Concrete\SettingService.cs" />
@@ -75,7 +75,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Entities.ForLife\Entities.ForLife.csproj">
-      <Project>{E6ACB0F3-72F2-482D-A3A4-48609F94278F}</Project>
+      <Project>{e6acb0f3-72f2-482d-a3a4-48609f94278f}</Project>
       <Name>Entities.ForLife</Name>
     </ProjectReference>
     <ProjectReference Include="..\ForLife.CORE\ForLife.CORE.csproj">
