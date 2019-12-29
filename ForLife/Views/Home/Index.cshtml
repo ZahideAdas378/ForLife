@@ -1,0 +1,11 @@
+﻿@using Entities.ForLife
+@model List<BloodGroup>
+@{
+    ViewBag.Title = "Index";
+}
+@foreach (BloodGroup item in Model)
+{
+    @item.BloodGroupName;
+}
+<h2>Index</h2>
+

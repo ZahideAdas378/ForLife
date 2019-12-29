@@ -1,7 +1,6 @@
 ﻿using ForLife.BLL.Abstract;
 using ForLife.BLL.Concrete;
 using ForLife.BLL.IOC.Ninject;
-//using ForLife.DAL.Concrete.EntityFramework.DAL;
 using Ninject;
 using System;
 using System.Collections.Generic;
@@ -10,17 +9,18 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace ForLife.App_Start
+namespace ForLifeUI.MVC.App_Start
 {
-    public class NinjectControllerFactory:DefaultControllerFactory
+    public class NinjectControllerFactory : DefaultControllerFactory
     {
+     
         private readonly IKernel kernel;
         public NinjectControllerFactory()
         {
             kernel = new StandardKernel();
             AddBllBinds();
         }
-
+        
         private void AddBllBinds()
         {
             this.kernel.Bind<IAdminService>().To<AdminService>();
@@ -40,7 +40,7 @@ namespace ForLife.App_Start
         protected override IController GetControllerInstance(RequestContext requestContext, Type controllerType)
         {
             return controllerType == null ? null : (IController)kernel.Get(controllerType);
-            
+
         }
 
     }

@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29519.181
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForLife", "ForLife\ForLife.csproj", "{BB38C11A-6B83-4DDB-AF33-6FD6B33A3787}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities.ForLife", "Entities.ForLife\Entities.ForLife.csproj", "{E6ACB0F3-72F2-482D-A3A4-48609F94278F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForLife.DAL", "ForLife.DAL\ForLife.DAL.csproj", "{F3BC0892-7D1E-4405-9B44-8FAB0E5BA5CD}"
@@ -13,16 +11,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForLife.CORE", "ForLife.COR
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForLife.BLL", "ForLife.BLL\ForLife.BLL.csproj", "{DBC3477F-0FED-487F-B5C7-835793F7533A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForLifeUI.MVC", "ForLifeUI.MVC\ForLifeUI.MVC.csproj", "{E1B8C5F8-2898-4177-907C-F6EDEF09EB9F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BB38C11A-6B83-4DDB-AF33-6FD6B33A3787}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BB38C11A-6B83-4DDB-AF33-6FD6B33A3787}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BB38C11A-6B83-4DDB-AF33-6FD6B33A3787}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BB38C11A-6B83-4DDB-AF33-6FD6B33A3787}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E6ACB0F3-72F2-482D-A3A4-48609F94278F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E6ACB0F3-72F2-482D-A3A4-48609F94278F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E6ACB0F3-72F2-482D-A3A4-48609F94278F}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -39,6 +35,10 @@ Global
 		{DBC3477F-0FED-487F-B5C7-835793F7533A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DBC3477F-0FED-487F-B5C7-835793F7533A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DBC3477F-0FED-487F-B5C7-835793F7533A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1B8C5F8-2898-4177-907C-F6EDEF09EB9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1B8C5F8-2898-4177-907C-F6EDEF09EB9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1B8C5F8-2898-4177-907C-F6EDEF09EB9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1B8C5F8-2898-4177-907C-F6EDEF09EB9F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

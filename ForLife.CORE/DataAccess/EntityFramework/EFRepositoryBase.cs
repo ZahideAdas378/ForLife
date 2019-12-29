@@ -46,6 +46,7 @@ namespace ForLife.CORE.DataAccess.EntityFramework
             {
                 return tContext.Set<TEntity>().Where(filter).ToList();
             }
+           
         }
 
         public void Update(TEntity entity)
