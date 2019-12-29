@@ -1,18 +1,13 @@
 ﻿using Entities.ForLife;
 using ForLife.DAL.Concrete.EntityFramework.Mapping;
-using System;
-using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ForLife.DAL.Concrete.EntityFramework
 {
     public class ForLifeDbContext : DbContext
     {
-        public ForLifeDbContext() : base("Server =.; Database=ForLifeDB; uid=sa; pwd=123")
+        public ForLifeDbContext() : base("Server =DESKTOP-4O27HBO\\SQLSERVER2019; Database=ForLifeDB; uid=sa; pwd=19962211")
         {
 
         }
@@ -27,6 +22,8 @@ namespace ForLife.DAL.Concrete.EntityFramework
         public DbSet<Message> Messages { get; set; }
         public DbSet<PatientDonor> PatientDonors { get; set; }
         public DbSet<Setting> Settings { get; set; }
+        public DbSet<PatientProfileSettings> ProfileSettings { get; set; }
+        public DbSet<DonorProfileSettings> DonorProfileSettings { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
@@ -41,6 +38,8 @@ namespace ForLife.DAL.Concrete.EntityFramework
             modelBuilder.Configurations.Add(new PatientMapping());
             modelBuilder.Configurations.Add(new SecurityQuestionMapping());
             modelBuilder.Configurations.Add(new SettingMapping());
+            modelBuilder.Configurations.Add(new PatientProfileSettingsMapping());
+            modelBuilder.Configurations.Add(new DonorProfileSettingsMapping());
 
             modelBuilder.Entity<DonationType>()
                 .HasMany(a => a.Donors)
@@ -62,8 +61,14 @@ namespace ForLife.DAL.Concrete.EntityFramework
                     a.MapRightKey("PatientID");
                     a.ToTable("DonationTypePatient");
                 });
-            
 
+            modelBuilder.Entity<Donor>()
+                .HasOptional(a => a.DonorProfileSettings)
+                .WithRequired(a => a.Donor);
+
+            modelBuilder.Entity<Patient>()
+             .HasOptional(a => a.PatientProfileSettings)
+             .WithRequired(a => a.Patient);
 
         }
     }

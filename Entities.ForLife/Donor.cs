@@ -25,5 +25,6 @@ namespace Entities.ForLife
         public virtual SecurityQuestion SecurityQuestion { get; set; }
         public virtual ICollection<Message> Messages { get; set; }
         public virtual ICollection<PatientDonor> PatientDonors { get; set; }
+        public virtual DonorProfileSettings DonorProfileSettings { get; set; }
     }
 }
