@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ForLife.BLL.Abstract
 {
-   public interface ISettingService:IBaseService<Setting>
+    public interface ISettingService : IBaseService<Setting>
     {
     }
 }

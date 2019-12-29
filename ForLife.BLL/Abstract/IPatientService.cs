@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace ForLife.BLL.Abstract
 {
-   public interface IPatientService:IBaseService<Patient>
+    public interface IPatientService : IBaseService<Patient>
     {
         List<Patient> FilterPatients(Country country, DonationType donationType, DateTime date);
-        
+
     }
 }

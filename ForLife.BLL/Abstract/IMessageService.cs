@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ForLife.BLL.Abstract
 {
-   public interface IMessageService:IBaseService<Message>
+    public interface IMessageService : IBaseService<Message>
     {
     }
 }

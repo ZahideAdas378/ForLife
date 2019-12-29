@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ForLife.BLL.Abstract
 {
-   public interface ICountryService:IBaseService<Country>
+    public interface ICountryService : IBaseService<Country>
     {
     }
 }

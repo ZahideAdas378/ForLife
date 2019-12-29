@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ForLife.BLL.Abstract
 {
-   public interface ISecurityQuestionService:IBaseService<SecurityQuestion>
+    public interface ISecurityQuestionService : IBaseService<SecurityQuestion>
     {
     }
 }

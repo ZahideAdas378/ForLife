@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ForLife.BLL.Abstract
 {
-    interface IDonorProfileSettingsService : IBaseService<DonorProfileSettings>
+    public interface IDonorProfileSettingsService : IBaseService<DonorProfileSettings>
     {
     }
 }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ForLife.DAL.Abstract
 {
-    interface IDonorProfileSettingsDAL : IEntityRepository<DonorProfileSettings>
+    public interface IDonorProfileSettingsDAL : IEntityRepository<DonorProfileSettings>
     {
     }
 }

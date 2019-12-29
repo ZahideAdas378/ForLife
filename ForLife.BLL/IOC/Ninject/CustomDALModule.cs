@@ -9,7 +9,7 @@ using Ninject.Modules;
 
 namespace ForLife.BLL.IOC.Ninject
 {
-    class CustomDALModule : NinjectModule
+    public class CustomDALModule : NinjectModule
     {
         public override void Load()
         {
@@ -22,8 +22,10 @@ namespace ForLife.BLL.IOC.Ninject
             Bind<IMessageDAL>().To<MessageDAL>();
             Bind<IPatientDAL>().To<PatientDAL>();
             Bind<IPatientDonorDAL>().To<PatientDonorDAL>();
-            Bind<ISecurityQuestionDAL>().To<ISecurityQuestionDAL>();
+            Bind<ISecurityQuestionDAL>().To<SecurityQuestionDAL>();
             Bind<ISettingDAL>().To<SettingDAL>();
+            Bind<IDonorProfileSettingsDAL>().To<DonorProfileSettingsDAL>();
+            Bind<IPatientProfileSettingsDAL>().To<PatientProfileSettingsDAL>();
         }
 
 

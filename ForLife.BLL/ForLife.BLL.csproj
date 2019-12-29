@@ -63,6 +63,7 @@
     <Compile Include="Concrete\CityService.cs" />
     <Compile Include="Concrete\CountryService.cs" />
     <Compile Include="Concrete\DonationTypeService.cs" />
+    <Compile Include="Concrete\DonorProfileSettingsService.cs" />
     <Compile Include="Concrete\DonorService.cs" />
     <Compile Include="Concrete\MessageService.cs" />
     <Compile Include="Concrete\PatientDonorService.cs" />

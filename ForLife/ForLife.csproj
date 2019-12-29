@@ -116,7 +116,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\" />
-    <Folder Include="IOC\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
@@ -131,6 +130,10 @@
     <ProjectReference Include="..\ForLife.CORE\ForLife.CORE.csproj">
       <Project>{5309f24f-ee87-45f1-81c9-6f7549048240}</Project>
       <Name>ForLife.CORE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ForLife.DAL\ForLife.DAL.csproj">
+      <Project>{F3BC0892-7D1E-4405-9B44-8FAB0E5BA5CD}</Project>
+      <Name>ForLife.DAL</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
