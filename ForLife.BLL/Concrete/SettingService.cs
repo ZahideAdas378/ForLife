@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ForLife.BLL.Concrete
 {
-    class SettingService : ISettingService
+    public class SettingService : ISettingService
     {
         ISettingDAL _dal;
         public SettingService(ISettingDAL setting)

@@ -50,9 +50,11 @@
     <Compile Include="Abstract\ICityService.cs" />
     <Compile Include="Abstract\ICountryService.cs" />
     <Compile Include="Abstract\IDonationTypeService.cs" />
+    <Compile Include="Abstract\IDonorProfileSettingsService.cs" />
     <Compile Include="Abstract\IDonorService.cs" />
     <Compile Include="Abstract\IMessageService.cs" />
     <Compile Include="Abstract\IPatientDonorService.cs" />
+    <Compile Include="Abstract\IPatientProfileSettingsService.cs" />
     <Compile Include="Abstract\IPatientService.cs" />
     <Compile Include="Abstract\ISecurityQuestionService.cs" />
     <Compile Include="Abstract\ISettingService.cs" />
@@ -62,8 +64,9 @@
     <Compile Include="Concrete\CountryService.cs" />
     <Compile Include="Concrete\DonationTypeService.cs" />
     <Compile Include="Concrete\DonorService.cs" />
-    <Compile Include="Concrete\IPatientServise.cs" />
     <Compile Include="Concrete\MessageService.cs" />
+    <Compile Include="Concrete\PatientDonorService.cs" />
+    <Compile Include="Concrete\PatientProfileSettings.cs" />
     <Compile Include="Concrete\PatientService.cs" />
     <Compile Include="Concrete\SecurityQuestionService.cs" />
     <Compile Include="Concrete\SettingService.cs" />
@@ -88,5 +91,6 @@
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

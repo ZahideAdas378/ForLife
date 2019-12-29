@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace ForLife.BLL.Concrete
 {
     //TODO:Burdaki metotlar fazla !!!
-    class BloodGroupService : IBloodGroupService
+    public class BloodGroupService : IBloodGroupService
     {
         IBloodGroupDAL _dal;
         public BloodGroupService(IBloodGroupDAL blood)

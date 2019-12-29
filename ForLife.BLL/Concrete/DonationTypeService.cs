@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ForLife.BLL.Concrete
 {
-    class DonationTypeService : IDonationTypeService
+    public class DonationTypeService : IDonationTypeService
     {
         IDonationTypeDAL _dal;
         public DonationTypeService(IDonationTypeDAL donationType)

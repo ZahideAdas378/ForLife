@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ForLife.BLL.Concrete
 {
-    class AdminService : IAdminService
+    public class AdminService : IAdminService
     {
         IAdminDAL _dal;
         public AdminService(IAdminDAL admin)
@@ -23,13 +23,13 @@ namespace ForLife.BLL.Concrete
 
         public void DeleteById(int id)
         {
-            Admin admin = _dal.Get(a=>a.AdminID==id);
+            Admin admin = _dal.Get(a => a.AdminID == id);
             _dal.Delete(admin);
         }
 
         public Admin Get(int entityID)
         {
-            return _dal.Get(a=>a.AdminID==entityID);
+            return _dal.Get(a => a.AdminID == entityID);
         }
 
         public ICollection<Admin> GetAll()

@@ -7,7 +7,7 @@ namespace ForLife.DAL.Concrete.EntityFramework
 {
     public class ForLifeDbContext : DbContext
     {
-        public ForLifeDbContext() : base("Server =DESKTOP-4O27HBO\\SQLSERVER2019; Database=ForLifeDB; uid=sa; pwd=19962211")
+        public ForLifeDbContext() : base("ForLifeConnection")
         {
 
         }

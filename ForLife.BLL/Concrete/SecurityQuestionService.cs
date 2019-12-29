@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ForLife.BLL.Concrete
 {
-    class SecurityQuestionService : ISecurityQuestionService
+    public class SecurityQuestionService : ISecurityQuestionService
     {
         ISecurityQuestionDAL _dal;
         public SecurityQuestionService(ISecurityQuestionDAL security)

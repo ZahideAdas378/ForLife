@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ForLife.BLL.Concrete
 {
-    class CityService : ICityService
+    public class CityService : ICityService
     {
         ICityDAL _dal;
         public CityService(ICityDAL city)
@@ -18,7 +18,7 @@ namespace ForLife.BLL.Concrete
         }
         public void Delete(City entity)
         {
-             _dal.Delete(entity);
+            _dal.Delete(entity);
         }
 
         public void DeleteById(int id)

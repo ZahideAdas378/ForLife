@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ForLife.BLL.Concrete
 {
-    class MessageService : IMessageService
+    public class MessageService : IMessageService
     {
         IMessageDAL _dal;
         public MessageService(IMessageDAL message)

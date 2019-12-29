@@ -121,9 +121,11 @@
     <Compile Include="Abstract\ICountryDAL.cs" />
     <Compile Include="Abstract\IDonationTypeDAL.cs" />
     <Compile Include="Abstract\IDonorDAL.cs" />
+    <Compile Include="Abstract\IDonorProfileSettingsDAL.cs" />
     <Compile Include="Abstract\IMessageDAL.cs" />
     <Compile Include="Abstract\IPatientDAL.cs" />
     <Compile Include="Abstract\IPatientDonorDAL.cs" />
+    <Compile Include="Abstract\IPatientProfileSettingsDAL.cs" />
     <Compile Include="Abstract\ISecurityQuestionDAL.cs" />
     <Compile Include="Abstract\ISettingDAL.cs" />
     <Compile Include="Concrete\EntityFramework\DAL\AdminDAL.cs" />
@@ -132,9 +134,11 @@
     <Compile Include="Concrete\EntityFramework\DAL\CountryDAL.cs" />
     <Compile Include="Concrete\EntityFramework\DAL\DonationTypeDAL.cs" />
     <Compile Include="Concrete\EntityFramework\DAL\DonorDAL.cs" />
+    <Compile Include="Concrete\EntityFramework\DAL\DonorProfileSettingsDAL.cs" />
     <Compile Include="Concrete\EntityFramework\DAL\MessageDAL.cs" />
     <Compile Include="Concrete\EntityFramework\DAL\PatientDAL.cs" />
     <Compile Include="Concrete\EntityFramework\DAL\PatientDonorDAL.cs" />
+    <Compile Include="Concrete\EntityFramework\DAL\PatientProfileSettingsDAL.cs" />
     <Compile Include="Concrete\EntityFramework\DAL\SecurityQuestionDAL.cs" />
     <Compile Include="Concrete\EntityFramework\DAL\SettingDAL.cs" />
     <Compile Include="Concrete\EntityFramework\ForLifeDbContext.cs" />

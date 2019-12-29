@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ForLife.BLL.Concrete
 {
-    class CountryService : ICountryService
+    public class CountryService : ICountryService
     {
         ICountryDAL _dal;
         public CountryService(ICountryDAL country)

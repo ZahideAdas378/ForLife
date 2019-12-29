@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ForLife.CORE.Entity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Entities.ForLife
 {
-    public class DonorProfileSettings
+    public class DonorProfileSettings:IEntity
     {
         public int DonorID { get; set; }
         public bool isDisplayName { get; set; }

@@ -44,6 +44,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Ninject, Version=3.3.4.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.3.4\lib\net45\Ninject.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -92,6 +95,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\NinjectControllerFactory.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -101,6 +105,7 @@
   <ItemGroup>
     <Content Include="Views\web.config" />
     <None Include="packages.config" />
+    <Content Include="Views\Shared\_LayoutFirst.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -113,6 +118,20 @@
     <Folder Include="Controllers\" />
     <Folder Include="IOC\" />
     <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Entities.ForLife\Entities.ForLife.csproj">
+      <Project>{e6acb0f3-72f2-482d-a3a4-48609f94278f}</Project>
+      <Name>Entities.ForLife</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ForLife.BLL\ForLife.BLL.csproj">
+      <Project>{DBC3477F-0FED-487F-B5C7-835793F7533A}</Project>
+      <Name>ForLife.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ForLife.CORE\ForLife.CORE.csproj">
+      <Project>{5309f24f-ee87-45f1-81c9-6f7549048240}</Project>
+      <Name>ForLife.CORE</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
