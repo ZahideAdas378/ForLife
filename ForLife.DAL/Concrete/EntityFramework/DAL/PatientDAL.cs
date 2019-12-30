@@ -11,9 +11,17 @@ namespace ForLife.DAL.Concrete.EntityFramework.DAL
 {
     public class PatientDAL : EFRepositoryBase<Patient, ForLifeDbContext>, IPatientDAL
     {
+        ForLifeDbContext _db;
         public PatientDAL(ForLifeDbContext db) : base(db)
         {
-
+            _db = db;
         }
+
+        public int Count(System.Linq.Expressions.Expression<Func<Patient, bool>> predicate)
+        {
+            return _db.Set<Patient>().Where(predicate).Count();
+        }
+
+      
     }
 }

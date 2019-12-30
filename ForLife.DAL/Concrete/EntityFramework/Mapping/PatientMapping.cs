@@ -33,7 +33,7 @@ namespace ForLife.DAL.Concrete.EntityFramework.Mapping
 
             Property(a => a.Photo)
                .IsRequired()
-               .HasColumnType("image");
+               .HasColumnType("nvarchar");
 
             Property(a => a.Address)
                .IsRequired()

@@ -11,18 +11,23 @@ namespace ForLifeUI.MVC.Controllers
     public class HomeController : Controller
     {
         // GET: Home
-        IBloodGroupService _bloodGroupService;
+        IDonorService _donorService;
+        IPatientService _patientService;
+        ISettingService _settingService;
 
-        public HomeController(IBloodGroupService bloodGroupService)
+        public HomeController(IDonorService donorService,IPatientService patientService,ISettingService settingService)
         {
-            _bloodGroupService = bloodGroupService;
+            _donorService = donorService;
+            _patientService = patientService;
+            _settingService = settingService;
 
         }
         public ActionResult Index()
         {
-            List<BloodGroup> bloodGroups = new List<BloodGroup>();
-            bloodGroups = _bloodGroupService.GetAll().ToList();
-            return View(bloodGroups);
+             ViewBag.PatientCount = _patientService.Count(a=>a.PatientID>0);
+             ViewBag.DonorCount= _donorService.Count(a => a.DonorID > 0);
+
+             return View();
         }
     }
 }

@@ -4,6 +4,7 @@ using ForLife.DAL.Abstract;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -16,6 +17,12 @@ namespace ForLife.BLL.Concrete
         {
             _dal = donor;
         }
+
+        public int Count(Expression<Func<Donor, bool>> predicate)
+        {
+            return _dal.Count(predicate);
+        }
+
         public void Delete(Donor entity)
         {
             _dal.Delete(entity);
