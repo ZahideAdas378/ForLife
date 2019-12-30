@@ -156,7 +156,6 @@
     <Compile Include="Concrete\EntityFramework\Mapping\PatientProfileSettingsMapping.cs" />
     <Compile Include="Concrete\EntityFramework\Mapping\SecurityQuestionMapping.cs" />
     <Compile Include="Concrete\EntityFramework\Mapping\SettingMapping.cs" />
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UnitOfWork\IUnitOfWork.cs" />
     <Compile Include="UnitOfWork\UnitOfWork.cs" />

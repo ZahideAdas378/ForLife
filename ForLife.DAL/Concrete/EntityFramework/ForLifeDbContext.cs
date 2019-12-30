@@ -9,7 +9,7 @@ namespace ForLife.DAL.Concrete.EntityFramework
     {
         public ForLifeDbContext() : base("ForLifeConnection")
         {
-
+            Database.SetInitializer(new ForLifeInitializer());
         }
         public DbSet<Admin> Admins { get; set; }
         public DbSet<BloodGroup> BloodGroups { get; set; }
