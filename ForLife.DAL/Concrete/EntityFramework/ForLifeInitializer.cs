@@ -140,7 +140,7 @@ namespace ForLife.DAL.Concrete.EntityFramework
             });
             context.SecurityQuestions.Add(new SecurityQuestion()
             {
-                Question = "çokcukluk lakabınız nedir?"
+                Question = "Çocukluk lakabınız nedir?"
             });
             context.SaveChanges();
                        
