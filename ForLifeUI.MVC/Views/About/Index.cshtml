@@ -1,4 +1,7 @@
-﻿@{
+﻿@using Entities.ForLife
+
+@model Setting
+@{
     Layout = "~/Views/Shared/_LayoutPage1.cshtml";
 }
 <div class="about-page-area bg-secondary section-space-bottom">
@@ -10,7 +13,16 @@
                     <center>  <h3> <strong> <span style="font-size:100px;">&#9888;</span> <br />Yasal Uyarılar</strong></h3>  </center>
                     <div class="inner-page-details ">
                         <p>
-                            Yinelenen bir sayfa içeriğinin okuyucunun dikkatini dağıttığı bilinen bir gerçektir. Lorem Ipsum kullanmanın amacı, sürekli 'buraya metin gelecek, buraya metin gelecek' yazmaya kıyasla daha dengeli bir harf dağılımı sağlayarak okunurluğu artırmasıdır. Şu anda birçok masaüstü yayıncılık paketi ve web sayfa düzenleyicisi, varsayılan mıgır metinler olarak Lorem Ipsum kullanmaktadır. Ayrıca arama motorlarında 'lorem ipsum' anahtar sözcükleri ile arama yapıldığında henüz tasarım aşamasında olan çok sayıda site listelenir. Yıllar içinde, bazen kazara, bazen bilinçli olarak (örneğin mizah katılarak), çeşitli sürümleri geliştirilmiştir.
+                           @Model.LegalWarning
+                            @*@if (Model != null)
+                            {
+                                foreach (Setting item in Model)
+                                {
+                                    @item.LegalWarning;
+                                }
+                            }*@
+
+                           
                         </p>
                     </div>
                 </aside>
@@ -22,8 +34,7 @@
                 <div class="inner-page-details inner-page-padding">
 
                     <p>
-                        when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centurbut a vfrrdyrtfglso survived
-                        but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+                        @Model.About
                     </p>
 
 
@@ -34,11 +45,7 @@
                 <div class="inner-page-details inner-page-padding">
 
                     <p>
-                        when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centurbut a vfrrdyrtfglso survived
-                        but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the releas survived not  raseth
-                        leap into electronic typesetting, remaining essentially unchanged. when an unknown printer took a galley of type and scrambled it to make a type specimen
-                        book. It has survived not only five centurbut a vfrrdyrtfglso survived  but also the leap into electronic typesetting, remaining essentially unchanged. It was po
-                        pularised in the 1960s with the releas survived not  rasethleap into electronic typesetting, remaining essentially unchanged.
+                        @Model.Mission
                     </p>
 
 
@@ -50,17 +57,13 @@
                 <div class="inner-page-details inner-page-padding">
 
                     <p>
-                        when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centurbut a vfrrdyrtfglso survived
-                        but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the releas survived not  raseth
-                        leap into electronic typesetting, remaining essentially unchanged. when an unknown printer took a galley of type and scrambled it to make a type specimen
-                        book. It has survived not only five centurbut a vfrrdyrtfglso survived  but also the leap into electronic typesetting, remaining essentially unchanged. It was po
-                        pularised in the 1960s with the releas survived not  rasethleap into electronic typesetting, remaining essentially unchanged.
+                        @Model.Vision
                     </p>
 
                 </div>
             </div>
         </div>
-        <!--</div>-->
+       
 
     </div>
 </div>

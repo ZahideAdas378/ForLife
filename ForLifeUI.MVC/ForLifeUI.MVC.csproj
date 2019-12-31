@@ -326,6 +326,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\SettingVM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -349,7 +350,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Entities.ForLife\Entities.ForLife.csproj">
@@ -359,6 +359,10 @@
     <ProjectReference Include="..\ForLife.BLL\ForLife.BLL.csproj">
       <Project>{dbc3477f-0fed-487f-b5c7-835793f7533a}</Project>
       <Name>ForLife.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ForLife.CORE\ForLife.CORE.csproj">
+      <Project>{5309f24f-ee87-45f1-81c9-6f7549048240}</Project>
+      <Name>ForLife.CORE</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

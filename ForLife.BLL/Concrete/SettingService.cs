@@ -16,6 +16,12 @@ namespace ForLife.BLL.Concrete
         {
             _dal = setting;
         }
+
+        public string add()
+        {
+            return _dal.Get(a => a.SettingID == 3).LegalWarning;
+        }
+
         public void Delete(Setting entity)
         {
             _dal.Delete(entity);
@@ -36,6 +42,8 @@ namespace ForLife.BLL.Concrete
         {
             return _dal.GetAll();
         }
+
+      
 
         public void Insert(Setting entity)
         {
