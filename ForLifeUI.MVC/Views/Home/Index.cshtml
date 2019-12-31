@@ -1,4 +1,4 @@
-﻿
+﻿@using Entities.ForLife
 @{
     Layout = "~/Views/Shared/_LayoutPage1.cshtml";
 }
@@ -123,7 +123,15 @@
                                 <center> <h3> <strong> <span style="font-size:100px;">&#9888;</span> <br />Yasal Uyarılar</strong></h3>  </center>
                                 <div class="inner-page-details ">
                                     <p>
-                                        Yinelenen bir sayfa içeriğinin okuyucunun dikkatini dağıttığı bilinen bir gerçektir. Lorem Ipsum kullanmanın amacı, sürekli 'buraya metin gelecek, buraya metin gelecek' yazmaya kıyasla daha dengeli bir harf dağılımı sağlayarak okunurluğu artırmasıdır. Şu anda birçok masaüstü yayıncılık paketi ve web sayfa düzenleyicisi, varsayılan mıgır metinler olarak Lorem Ipsum kullanmaktadır. Ayrıca arama motorlarında 'lorem ipsum' anahtar sözcükleri ile arama yapıldığında henüz tasarım aşamasında olan çok sayıda site listelenir. Yıllar içinde, bazen kazara, bazen bilinçli olarak (örneğin mizah katılarak), çeşitli sürümleri geliştirilmiştir.
+                                       @Model[0].LegalWarning
+                                        @*@if (Model != null)
+                                        {
+                                            foreach (Setting item in Model)
+                                            {
+                                                @item.LegalWarning;
+                                            }
+                                        }*@
+                                       
                                     </p>
                                 </div>
                             </aside>
@@ -131,7 +139,7 @@
                 <div class="col-lg-6">
                     <h2 class="title-default">HEADING</h2>
                     <div class="media" style="text-align:center;">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/otna9Pe3jWg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/MksKGPSPhA4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
                 <div class="col-lg-3  inner-page-padding">
@@ -139,10 +147,10 @@
 
 
                     <h4><strong>Sağ taraf 1</strong></h4>
-                    <p>Lorem Ipsum pasajlarının birçok çeşitlemesi vardır. Ancak bunların büyük bir çoğunluğu mizah katılarak veya rastgele sözcükler eklenerek değiştirilmişlerdir. Eğer bir Lorem Ipsum pasajı kullanacaksanız, metin aralarına utandırıcı sözcükler gizlenmediğinden emin olmanız gerekir. İnternet'teki tüm Lorem Ipsum üreteçleri önceden belirlenmiş metin bloklarını yineler. Bu da, bu üreteci İnternet üzerindeki gerçek Lorem Ipsum üreteci yapar. Bu üreteç, 200'den fazla Latince sözcük ve onlara ait cümle yapılarını içeren bir sözlük kullanır.</p>
+                    <p> @Model[0].FirstAside</p>
                     <h4><strong>Sağ taraf 2</strong></h4>
-                    <p>Lorem Ipsum pasajlarının birçok çeşitlemesi vardır. Ancak bunların büyük bir çoğunluğu mizah katılarak veya rastgele sözcükler eklenerek değiştirilmişlerdir. Eğer bir Lorem Ipsum pasajı kullanacaksanız, metin aralarına utandırıcı sözcükler gizlenmediğinden emin olmanız gerekir. İnternet'teki tüm Lorem Ipsum üreteçleri önceden belirlenmiş metin bloklarını yineler. Bu da, bu üreteci İnternet üzerindeki gerçek Lorem Ipsum üreteci yapar.
-                </div>
+                    <p>@Model[0].SecondAside
+</div>
             </div>
         </div>
     </div>
@@ -150,7 +158,7 @@
 <div class="container-fluid" id="isotope-container">
     <!-- Buraya resim ve video gelecek -->
 </div>
-    </div>
+    
 
 <div class="trending-products-area section-space-default">
 

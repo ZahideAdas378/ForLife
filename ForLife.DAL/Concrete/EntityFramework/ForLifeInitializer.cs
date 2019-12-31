@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.Validation;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +23,36 @@ namespace ForLife.DAL.Concrete.EntityFramework
                 Password = "123"
             };
             context.Admins.Add(admin);
+
+            //context.Settings.Add(new Setting()
+            //{
+            //    logo = "‪C:\\Users\\zübeyir\\Desktop\\ForLife\\Template5\\img\\logo2t.png",
+            //    Title = "asd",
+            //    Fax = "asd",
+            //    Phone = "55555",
+            //    Address = "asd",
+            //    Email = "asd",
+            //    Facebook = "asd",
+            //    Youtube = "asd",
+            //    Instagram = "asd",
+            //    GoogleMap = "asd",
+            //    LegalWarning = "asd",
+            //    LawLink = "asd",
+            //    DecreeLink = "asd",
+            //    CircularLink = "asd",
+            //    ReligionDecisionLink = "asd",
+            //    About = "asd",
+            //    Mission = "asd",
+            //    Vision = "asd",
+            //    HomeVideo = "asd",
+            //    FirstAside = "asd",
+            //    SecondAside = "asd",
+            //});
+           
+
+            
+            
+
             context.BloodGroups.Add(new BloodGroup()
             {
                 BloodGroupID = 1,

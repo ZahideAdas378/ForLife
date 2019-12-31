@@ -15,7 +15,7 @@ namespace ForLifeUI.MVC.Controllers
         IPatientService _patientService;
         ISettingService _settingService;
 
-        public HomeController(IDonorService donorService,IPatientService patientService,ISettingService settingService)
+        public HomeController(IDonorService donorService, IPatientService patientService, ISettingService settingService)
         {
             _donorService = donorService;
             _patientService = patientService;
@@ -24,10 +24,12 @@ namespace ForLifeUI.MVC.Controllers
         }
         public ActionResult Index()
         {
-             ViewBag.PatientCount = _patientService.Count(a=>a.PatientID>0);
-             ViewBag.DonorCount= _donorService.Count(a => a.DonorID > 0);
+            ViewBag.PatientCount = _patientService.Count(a => a.PatientID > 0);
+            ViewBag.DonorCount = _donorService.Count(a => a.DonorID > 0);
+           
+            List<Setting> setting = _settingService.GetAll() as List<Setting>;
 
-             return View();
+            return View(setting);
         }
     }
 }
