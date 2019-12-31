@@ -84,6 +84,8 @@ namespace ForLife.DAL.Concrete.EntityFramework.Mapping
                 .WithMany(a => a.Donors)
                 .HasForeignKey(a=>a.CityID);
 
+            
+
             HasRequired(a => a.SecurityQuestion)
                .WithMany(a => a.Donors)
                .HasForeignKey(a => a.SecurityQuestionID);

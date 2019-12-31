@@ -25,12 +25,12 @@ namespace Entities.ForLife
         public DateTime CreateDate { get; set; }
         public DateTime? ModifiedDate { get; set; }
         public int CityID { get; set; }
-       // public int CountryID { get; set; }
+        //public int CountryID { get; set; }
         public int SecurityQuestionID { get; set; }
         public string SecurityAnswer { get; set; }
         public int BloodGroupID { get; set; }
         public int DonationTypeID { get; set; }
-        public DateTime DonationDate { get; set; }
+        public DateTime? DonationDate { get; set; }
         public string ContactChannel { get; set; }
 
     }

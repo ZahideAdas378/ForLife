@@ -12,10 +12,14 @@ namespace Entities.ForLife
         public Country()
         {
             Cities = new HashSet<City>();
+            //Donors = new HashSet<Donor>();
+
         }
         public int CountryID { get; set; }
         public string CountryName { get; set; }
         public virtual ICollection<City>  Cities { get; set; }
+        //public virtual ICollection<Donor> Donors { get; set; }
+
 
 
     }

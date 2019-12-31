@@ -21,6 +21,7 @@ namespace Entities.ForLife
         
         public virtual BloodGroup BloodGroup { get; set; }
         public virtual City City { get; set; }
+        //public virtual Country Country { get; set; }
         public virtual ICollection<DonationType> DonationTypes { get; set; }
         public virtual SecurityQuestion SecurityQuestion { get; set; }
         public virtual ICollection<Message> Messages { get; set; }

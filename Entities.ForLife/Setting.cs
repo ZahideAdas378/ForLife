@@ -10,7 +10,7 @@ namespace Entities.ForLife
     public class Setting : IEntity
     {
         public int SettingID { get; set; }
-        public byte[] logo{ get; set; }
+        public string logo{ get; set; }
         public  string Title { get; set; }
         public string Phone { get; set; }
         public string Fax { get; set; }

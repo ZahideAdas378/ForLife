@@ -33,7 +33,7 @@ namespace ForLife.DAL.Concrete.EntityFramework.Mapping
                 .HasMaxLength(300);
             Property(a => a.logo)
                 .IsRequired()
-                .HasColumnType("image");
+                .HasColumnType("nvarchar");
             Property(a => a.About)
              .IsRequired()
              .HasMaxLength(1000); 

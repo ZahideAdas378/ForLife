@@ -22,7 +22,7 @@ namespace ForLife.DAL.Concrete.EntityFramework
         public DbSet<Message> Messages { get; set; }
         public DbSet<PatientDonor> PatientDonors { get; set; }
         public DbSet<Setting> Settings { get; set; }
-        public DbSet<PatientProfileSettings> ProfileSettings { get; set; }
+        public DbSet<PatientProfileSettings> PatientProfileSettings { get; set; }
         public DbSet<DonorProfileSettings> DonorProfileSettings { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
