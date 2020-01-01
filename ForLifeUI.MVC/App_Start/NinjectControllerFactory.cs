@@ -26,6 +26,7 @@ namespace ForLifeUI.MVC.App_Start
             this.kernel.Bind<IAdminService>().To<AdminService>();
             this.kernel.Bind<IBloodGroupService>().To<BloodGroupService>();
             this.kernel.Bind<ICountryService>().To<CountryService>();
+            this.kernel.Bind<ICityService>().To<CityService>();
             this.kernel.Bind<IDonationTypeService>().To<DonationTypeService>();
             this.kernel.Bind<IDonorProfileSettingsService>().To<DonorProfileSettingsService>();
             this.kernel.Bind<IDonorService>().To<DonorService>();

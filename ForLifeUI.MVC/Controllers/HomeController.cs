@@ -21,20 +21,19 @@ namespace ForLifeUI.MVC.Controllers
             _donorService = donorService;
             _patientService = patientService;
             _settingService = settingService;
-
+            ViewBag.Setting = _settingService.GetAll() as List<Setting>;
         }
         public ActionResult Index()
         {
             ViewBag.PatientCount = _patientService.Count(a => a.PatientID > 0);
-            ViewBag.DonorCount = _donorService.Count(a => a.DonorID > 0);
-            List<Setting> setting = _settingService.GetAll() as List<Setting>;
-            return View(setting);
+            ViewBag.DonorCount = _donorService.Count(a => a.DonorID > 0);      
+            return View();
         }      
           
         public ActionResult About()
         {
-            List<Setting> setting = _settingService.GetAll() as List<Setting>;
-            return View(setting);
+          
+            return View();
         }
      
 

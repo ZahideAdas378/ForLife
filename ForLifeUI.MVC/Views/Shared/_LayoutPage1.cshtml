@@ -1,12 +1,11 @@
 ﻿@using Entities.ForLife
-@model List<Setting>
 
 <!DOCTYPE html>
 
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>@Model[0].Title</title>
+    <title>@ViewBag.setting[0].Title</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="~/img/ustlogo.png">
@@ -65,7 +64,7 @@
                             <div class="col-lg-2 col-md-2 col-sm-2 hidden-xs">
                                 <div class="logo-area">
                                    
-                                    <a href="index.htm"><img class="img-responsive" src="~/@Model[0].logo" alt="logo" style="width:90px;height:55px"></a>
+                                    <a href="index.htm"><img class="img-responsive" src="~/@ViewBag.setting[0].logo" alt="logo" style="width:90px;height:55px"></a>
                                 </div>
                             </div>
                             <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
@@ -168,10 +167,10 @@
                         <div class="footer-box">
                             <h3 class="title-bar-left title-bar-footer">Our Address</h3>
                             <ul class="corporate-address">
-                                <li><i class="fa fa-map-marker" aria-hidden="true"></i><a href=@Model[0].Phone> @Model[0].Address</a></li>
-                                <li><i class="fa fa-phone" aria-hidden="true"></i>@Model[0].Phone</li>
-                                <li><i class="fa fa-fax" aria-hidden="true"></i>@Model[0].Fax</li>
-                                <li><i class="fa fa-envelope-o" aria-hidden="true"></i>@Model[0].Email</li>
+                                <li><i class="fa fa-map-marker" aria-hidden="true"></i><a href=@ViewBag.setting[0].Phone> @ViewBag.setting[0].Address</a></li>
+                                <li><i class="fa fa-phone" aria-hidden="true"></i>@ViewBag.setting[0].Phone</li>
+                                <li><i class="fa fa-fax" aria-hidden="true"></i>@ViewBag.setting[0].Fax</li>
+                                <li><i class="fa fa-envelope-o" aria-hidden="true"></i>@ViewBag.setting[0].Email</li>
                             </ul>
                         </div>
                     </div>
@@ -211,11 +210,11 @@
                         <div class="footer-box">
                             <h3 class="title-bar-left title-bar-footer">Follow Us On</h3>
                             <ul class="footer-social">
-                                <li><a href= @Model[0].Facebook><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                <li><a href= @ViewBag.setting[0].Facebook><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                                
-                                <li><a href= @Model[0].Youtube><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                                <li><a href= @ViewBag.setting[0].Youtube><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
                               
-                                <li><a href=@Model[0].Instagram><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                <li><a href=@ViewBag.setting[0].Instagram><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
                             </ul>
                             <div class="newsletter-area">
                                 <h3>Newsletter Sign Up!</h3>

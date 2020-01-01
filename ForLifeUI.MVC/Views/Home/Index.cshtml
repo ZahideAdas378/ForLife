@@ -11,7 +11,7 @@
         <div class="main-banner2-wrapper">
             <ul>
                 <li>
-                    <a class="apply-now-btn-color hidden-on-mobile" href="registration.htm">Hasta Kayıt Formu Doldurmak İçin Tıklayınız</a>
+                    <a class="apply-now-btn-color hidden-on-mobile" href="~/Patient/Index">Hasta Kayıt Formu Doldurmak İçin Tıklayınız</a>
                 </li>
                 <li>
                     <a class="apply-now-btn-color hidden-on-mobile" href="registration.htm">Donor Kayıt Formu Doldurmak İçin Tıklayınız</a>
@@ -123,15 +123,15 @@
                                 <center> <h3> <strong> <span style="font-size:100px;">&#9888;</span> <br />Yasal Uyarılar</strong></h3>  </center>
                                 <div class="inner-page-details ">
                                     <p>
-                                       @Model[0].LegalWarning
+                                        @ViewBag.setting[0].LegalWarning
                                         @*@if (Model != null)
-                                        {
-                                            foreach (Setting item in Model)
-                                            {
-                                                @item.LegalWarning;
-                                            }
-                                        }*@
-                                       
+        {
+            foreach (Setting item in Model)
+            {
+                @item.LegalWarning;
+            }
+        }*@
+
                                     </p>
                                 </div>
                             </aside>
@@ -147,9 +147,9 @@
 
 
                     <h4><strong>Sağ taraf 1</strong></h4>
-                    <p> @Model[0].FirstAside</p>
+                    <p> @ViewBag.setting[0].FirstAside</p>
                     <h4><strong>Sağ taraf 2</strong></h4>
-                    <p>@Model[0].SecondAside
+                    <p>@ViewBag.setting[0].SecondAside
 </div>
             </div>
         </div>
