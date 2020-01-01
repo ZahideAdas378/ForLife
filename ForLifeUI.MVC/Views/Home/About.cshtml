@@ -1,6 +1,6 @@
 ﻿@using Entities.ForLife
 
-@model Setting
+@model List<Setting>
 @{
     Layout = "~/Views/Shared/_LayoutPage1.cshtml";
 }
@@ -13,16 +13,16 @@
                     <center>  <h3> <strong> <span style="font-size:100px;">&#9888;</span> <br />Yasal Uyarılar</strong></h3>  </center>
                     <div class="inner-page-details ">
                         <p>
-                           @Model.LegalWarning
+                            @Model[0].LegalWarning
                             @*@if (Model != null)
-                            {
-                                foreach (Setting item in Model)
                                 {
-                                    @item.LegalWarning;
-                                }
-                            }*@
+                                    foreach (Setting item in Model)
+                                    {
+                                        @item.LegalWarning;
+                                    }
+                                }*@
 
-                           
+
                         </p>
                     </div>
                 </aside>
@@ -34,7 +34,7 @@
                 <div class="inner-page-details inner-page-padding">
 
                     <p>
-                        @Model.About
+                        @Model[0].About
                     </p>
 
 
@@ -45,7 +45,7 @@
                 <div class="inner-page-details inner-page-padding">
 
                     <p>
-                        @Model.Mission
+                        @Model[0].Mission
                     </p>
 
 
@@ -57,13 +57,13 @@
                 <div class="inner-page-details inner-page-padding">
 
                     <p>
-                        @Model.Vision
+                        @Model[0].Vision
                     </p>
 
                 </div>
             </div>
         </div>
-       
+
 
     </div>
 </div>

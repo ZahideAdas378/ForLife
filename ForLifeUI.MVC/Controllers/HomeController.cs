@@ -1,5 +1,6 @@
 ﻿using Entities.ForLife;
 using ForLife.BLL.Abstract;
+using ForLifeUI.MVC.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,10 +27,18 @@ namespace ForLifeUI.MVC.Controllers
         {
             ViewBag.PatientCount = _patientService.Count(a => a.PatientID > 0);
             ViewBag.DonorCount = _donorService.Count(a => a.DonorID > 0);
-           
             List<Setting> setting = _settingService.GetAll() as List<Setting>;
-
+            return View(setting);
+        }      
+          
+        public ActionResult About()
+        {
+            List<Setting> setting = _settingService.GetAll() as List<Setting>;
             return View(setting);
         }
+     
+
+        
+
     }
 }

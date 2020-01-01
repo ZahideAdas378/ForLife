@@ -9,7 +9,8 @@
     <title>@Model[0].Title</title>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="~/img/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="~/img/ustlogo.png">
+    @*<img src="~/img/ustlogo.PNG" />*@
     <link href="~/Content/css/normalize.css" rel="stylesheet" />
     <!-- Normalize CSS -->
     <link rel="stylesheet" href="~/Content/css/normalize.css">
@@ -63,6 +64,7 @@
                         <div class="row">
                             <div class="col-lg-2 col-md-2 col-sm-2 hidden-xs">
                                 <div class="logo-area">
+                                   
                                     <a href="index.htm"><img class="img-responsive" src="~/@Model[0].logo" alt="logo" style="width:90px;height:55px"></a>
                                 </div>
                             </div>
@@ -90,6 +92,7 @@
 
                                     <li>
                                         <div class="apply-btn-area">
+                                   
                                             <a class="apply-now-btn" href="#" id="Patient-button">Hasta Girişi</a>
                                             <div class="login-form" id="login-form" style="display: none;">
                                                 <h2>Login</h2>
@@ -140,7 +143,7 @@
                         <nav id="desktop-nav">
                             <ul>
                                 <li><a href="/Home/Index">Anasayfa</a></li>
-                                <li><a href="/About/Index">Hakkımızda</a></li>
+                                <li><a href="/Home/About">Hakkımızda</a></li>
                                 <li><a href="advancedSearch.htm">Gelişmiş Profil Arama</a></li>
                                 <li><a href="blog.htm">Yasal Düzenlemeler</a></li>
                                 <li><a href="contact.htm">İletişim</a></li>
@@ -271,3 +274,5 @@
 
 </body>
 </html>
+
+@RenderSection("scripts", false)
