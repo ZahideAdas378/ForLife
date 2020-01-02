@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace ForLife.DAL.Concrete.EntityFramework.Mapping
 {
-    public class PatientMapping:EntityTypeConfiguration<Patient>
+    public class PatientMapping : EntityTypeConfiguration<Patient>
     {
         public PatientMapping()
         {
-            HasKey(a=>a.PatientID);
+            HasKey(a => a.PatientID);
             Property(a => a.LastName)
                .IsRequired()
                .HasMaxLength(30);
@@ -25,7 +25,8 @@ namespace ForLife.DAL.Concrete.EntityFramework.Mapping
 
             Property(a => a.Gender)
                 .IsRequired()
-                .HasColumnType("bit");
+                .HasColumnType("nchar")
+                .HasMaxLength(8);
 
             Property(a => a.ContactChannel)
            .IsRequired()
@@ -49,9 +50,7 @@ namespace ForLife.DAL.Concrete.EntityFramework.Mapping
               .HasMaxLength(50);
 
 
-            Property(a => a.PersonelInformation)
-              .IsRequired();
-
+          
             Property(a => a.UserName)
              .IsRequired()
              .HasMaxLength(30);
@@ -76,7 +75,7 @@ namespace ForLife.DAL.Concrete.EntityFramework.Mapping
             HasRequired(a => a.City)
                .WithMany(a => a.Patients)
                .HasForeignKey(a => a.CityID);
-              
+
 
             Map(a => a.MapInheritedProperties());
 

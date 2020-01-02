@@ -6,8 +6,9 @@
 
 
 <div class="newest-products-area bg-secondary section-space-default">
-    <!-- Why Choose Area End Here -->
+    <!-- Why Choose Area End Here nedir problem o yok bende sanırım link lazm -->
     <!-- Author Banner Area Start Here -->
+
 
     <div class="container">
         <div class="row">
@@ -38,57 +39,69 @@
                                 @using (Html.BeginForm("PatientRegisterPost", "Patient", new { id = "personal-info-form" }))
                                 {
 
-                                    <div class="row">
-                                        @Html.AntiForgeryToken()
-                                        <hr />
-                                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                                        <div class="col-lg-12 ">
-                                            <div class="form-group">
-                                                @Html.LabelFor(model => model.Photo, "Fotoğraf Ekle", htmlAttributes: new { @class = "control-label" })
-                                                <input id="FotoUrl" type="file" name="file" required" />
-                                                @Html.ValidationMessageFor(model => model.Photo, "", new { @class = "text-danger" })
-                                            </div>
+                                <div class="row">
+                                    @Html.AntiForgeryToken()
+                                    <hr />
+                                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                    <div class="col-lg-12 ">
+                                        <div class="form-group">
+                                            @Html.LabelFor(model => model.Photo, "Fotoğraf Ekle", htmlAttributes: new { @class = "control-label" })
+                                            @Html.TextBoxFor(model => model.Photo, new { type = "file" })
+                                            @Html.ValidationMessageFor(model => model.Photo, "", new { @class = "text-danger" })
                                         </div>
+                                    </div>
 
-                                        <div class="col-lg-12 ">
-                                            <div class="form-group">
-                                                <label class="control-label" for="first-name">First Name *</label>
-                                                @Html.TextBoxFor(model => model.FirstName, new { @class = "form-control", id = "first-name" })
-                                                @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+                                    <div class="col-lg-12 ">
+                                        <div class="form-group">
+                                            <label class="control-label" for="first-name">First Name *</label>
+                                            @Html.TextBoxFor(model => model.FirstName, new { @class = "form-control", id = "first-name" })
+                                            @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
 
-                                            </div>
                                         </div>
-                                        <div class="col-lg-12 ">
-                                            <div class="form-group">
-                                                <label class="control-label" for="last-name">Last Name *</label>
-                                                @Html.TextBoxFor(model => model.LastName, new { @class = "form-control", id = "last-name" })
-                                                @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+                                    </div>
+                                    <div class="col-lg-12 ">
+                                        <div class="form-group">
+                                            <label class="control-label" for="last-name">Last Name *</label>
+                                            @Html.TextBoxFor(model => model.LastName, new { @class = "form-control", id = "last-name" })
+                                            @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
 
-                                            </div>
                                         </div>
-                                        <div class="row" style="padding-left:15px;">
-                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                                <div class="form-group">
-                                                    <label class="control-label" for="district">ForLife.com'dan nasıl haberdar oldunuz?</label>
-                                                    <div class="custom-select">
-                                                        <select id="district" class='select2'>
-                                                            <option value="0">Seminer
-                                                            <option value="1">Sosyal Medya
-                                                            <option value="2">Reklam
-                                                            <option value="4">Gazete
-                                                            <option value="5">Çevre
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                    </div>
+                                    <div class="col-lg-12 ">
+                                        <div class="form-group">
+                                            <label class="control-label" for="first-name">First Name *</label>
+                                            @Html.TextBoxFor(model => model.Email, new { @class = "form-control", id = "first-name" })
+                                            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+
                                         </div>
-                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <div class="pLace-order">
-                                                <button class="update-btn disabled" type="button" value="Sonraki">Sonraki Sayfa</button>
+                                    </div>
+                                    <div class="row" style="padding-left:15px;">
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                            <div class="form-group">
+                                                <label class="control-label" for="district">ForLife.com'dan nasıl haberdar oldunuz?</label>
+                                                @Html.DropDownListFor(model => model.ContactChannel, (IEnumerable<SelectListItem>)
+        ViewBag.ContactChannel, "Lütfen Seçiniz", new { htmlAttributes = new { @class = "form-control", id = "district" } })
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="form-group" style=" padding-top:20px; font-size:15px;">
+                                        @Html.LabelFor(model => model.BirthDate, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10">
+                                            @Html.TextBoxFor(model => model.BirthDate, new { type = "datetime-local" })
+
+                                            @Html.ValidationMessageFor(model => model.BirthDate, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="pLace-order">
+                                            <div class="col-md-offset-2 col-md-10">
+                                                <button class="update-btn disabled" id="btnNext1">Sonraki Sayfa</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 }
+
                             </div>
                         </div>
                     </div>
@@ -96,8 +109,23 @@
                 </div>
             </div>
         </div>
-
     </div>
-
 </div>
 
+@section scripts{
+    <script>
+
+        $("#btnNext1").click(function () {
+            //Get text or inner html of the selected option
+            var selectedText = $("#mySelect option:selected").html();
+            alert(selectedText);
+        });
+
+        btnNext1
+
+    </script>
+}
+<script></script>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>

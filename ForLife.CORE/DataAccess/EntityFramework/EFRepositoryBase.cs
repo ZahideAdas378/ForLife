@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.Validation;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
@@ -19,11 +20,28 @@ namespace ForLife.CORE.DataAccess.EntityFramework
         public EFRepositoryBase(TContext dbContext)
         {
             tContext = dbContext;
-          //  _dbSet = tContext.Set<TEntity>();
+            //_dbSet = tContext.Set<TEntity>();
         }
         public void Add(TEntity entity)
         {
-            tContext.Entry(entity).State = EntityState.Added;
+            try
+            {
+                tContext.Entry(entity).State = EntityState.Added;
+                System.Diagnostics.Debug.WriteLine(entity);  //local enttityle izle 
+                tContext.SaveChanges();
+            }
+            catch (DbEntityValidationException dbEx)
+            {
+                foreach (var validationErrors in dbEx.EntityValidationErrors)
+                {
+                    foreach (var validationError in validationErrors.ValidationErrors)
+                    {
+                        System.Console.WriteLine("Property: {0} Error: {1}", validationError.PropertyName, validationError.ErrorMessage);
+                    }
+                }
+            }
+
+
         }
 
         public void Delete(TEntity entity)
@@ -38,7 +56,7 @@ namespace ForLife.CORE.DataAccess.EntityFramework
 
         public ICollection<TEntity> GetAll(Expression<Func<TEntity, bool>> filter = null)
         {
-            if (filter==null)
+            if (filter == null)
             {
                 return tContext.Set<TEntity>().ToList();
             }
@@ -46,7 +64,7 @@ namespace ForLife.CORE.DataAccess.EntityFramework
             {
                 return tContext.Set<TEntity>().Where(filter).ToList();
             }
-           
+
         }
 
         public void Update(TEntity entity)

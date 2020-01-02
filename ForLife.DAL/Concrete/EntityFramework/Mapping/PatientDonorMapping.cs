@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ForLife.DAL.Concrete.EntityFramework.Mapping
 {
-    class PatientDonorMapping:EntityTypeConfiguration<PatientDonor>
+    class PatientDonorMapping : EntityTypeConfiguration<PatientDonor>
     {
         public PatientDonorMapping()
         {
@@ -18,19 +18,19 @@ namespace ForLife.DAL.Concrete.EntityFramework.Mapping
             HasRequired(a => a.Donor)
                  .WithMany(a => a.PatientDonors)
                  .HasForeignKey(a => a.DonorID);
-         
+
 
 
             HasRequired(a => a.Patient)
                 .WithMany(a => a.PatientDonors)
                 .HasForeignKey(a => a.PatientID);
-               
+
 
 
             HasRequired(a => a.DonationType)
                 .WithMany(a => a.PatientDonors)
                 .HasForeignKey(a => a.DonationID);
-            
+
 
             Property(a => a.PatientDonorID)
                 .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);

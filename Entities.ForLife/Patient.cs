@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Entities.ForLife
 {
-    public class Patient:BaseEntity
+    public class Patient : BaseEntity
     {
         public Patient()
         {

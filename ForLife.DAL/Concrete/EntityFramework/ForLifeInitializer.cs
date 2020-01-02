@@ -23,35 +23,7 @@ namespace ForLife.DAL.Concrete.EntityFramework
                 Password = "123"
             };
             context.Admins.Add(admin);
-
-            //context.Settings.Add(new Setting()
-            //{
-            //    logo = "‪C:\\Users\\zübeyir\\Desktop\\ForLife\\Template5\\img\\logo2t.png",
-            //    Title = "asd",
-            //    Fax = "asd",
-            //    Phone = "55555",
-            //    Address = "asd",
-            //    Email = "asd",
-            //    Facebook = "asd",
-            //    Youtube = "asd",
-            //    Instagram = "asd",
-            //    GoogleMap = "asd",
-            //    LegalWarning = "asd",
-            //    LawLink = "asd",
-            //    DecreeLink = "asd",
-            //    CircularLink = "asd",
-            //    ReligionDecisionLink = "asd",
-            //    About = "asd",
-            //    Mission = "asd",
-            //    Vision = "asd",
-            //    HomeVideo = "asd",
-            //    FirstAside = "asd",
-            //    SecondAside = "asd",
-            //});
-           
-
-            
-            
+            context.SaveChanges();
 
             context.BloodGroups.Add(new BloodGroup()
             {
@@ -93,7 +65,7 @@ namespace ForLife.DAL.Concrete.EntityFramework
                 BloodGroupID = 8,
                 BloodGroupName = "0-"
             });
-
+            context.SaveChanges();
             context.Countries.Add(new Country()
             {
                 CountryName = "Türkiye",
@@ -105,7 +77,7 @@ namespace ForLife.DAL.Concrete.EntityFramework
 
             }
             });
-
+            context.SaveChanges();
             context.Countries.Add(new Country()
             {
                 CountryName = "Amerika",
@@ -117,7 +89,7 @@ namespace ForLife.DAL.Concrete.EntityFramework
 
             }
             });
-
+            context.SaveChanges();
             context.Countries.Add(new Country()
             {
                 CountryName = "Almanya",
@@ -129,7 +101,7 @@ namespace ForLife.DAL.Concrete.EntityFramework
 
             }
             });
-
+            context.SaveChanges();
 
             context.DonationTypes.Add(new DonationType()
             {
@@ -183,13 +155,13 @@ namespace ForLife.DAL.Concrete.EntityFramework
                 Question = "Çocukluk lakabınız nedir?"
             });
 
-
+            context.SaveChanges();
             context.Donors.Add(new Donor()
             {
                 DonorID = 1,
                 CityID = 1,
                 Address = "asdasdjlaksjdalskd",
-                BirthDate = new DateTime(1994,04,12),
+                BirthDate = new DateTime(1994, 04, 12),
                 BloodGroupID = 1,
                 ContactChannel = "Akadaş aracılığı ile",
                 CreateDate = DateTime.Now,
@@ -198,20 +170,19 @@ namespace ForLife.DAL.Concrete.EntityFramework
                 Email = "sonar@gmail.com",
                 FirstName = "Ümit",
                 LastName = "Sonar",
-                Password = "123",
-                PersonelInformation = "asdasdasdasdasdasd",
+                Password = "123",           
                 Phone = "054444444",
                 Photo = @"‪C:\Users\ASUS\Desktop\group.png",
                 SecurityQuestionID = 4,
                 SecurityAnswer = "boncuk",
-                Gender = true,
+                Gender = "Erkek",
                 IsActive = true,
                 UserName = "sonaradam",
                 IdentityNumber = "11111111111",
 
 
             });
-
+            context.SaveChanges();
             context.Donors.Add(new Donor()
             {
                 DonorID = 2,
@@ -226,18 +197,17 @@ namespace ForLife.DAL.Concrete.EntityFramework
                 Email = "cafercan@gmail.com",
                 FirstName = "Mustafa",
                 LastName = "Akçakaya",
-                Password = "123",
-                PersonelInformation = "asdasdasdasdasdasd",
+                Password = "123",               
                 Phone = "054444444",
                 Photo = @"‪C:\Users\ASUS\Desktop\group.png",
                 SecurityQuestionID = 4,
                 SecurityAnswer = "cicikuş",
-                Gender = true,
+                Gender = "Erkek",
                 IsActive = true,
                 UserName = "cafercan",
                 IdentityNumber = "11111111112",
             });
-
+            context.SaveChanges();
             context.Donors.Add(new Donor()
             {
                 DonorID = 3,
@@ -252,18 +222,17 @@ namespace ForLife.DAL.Concrete.EntityFramework
                 Email = "arslanemre@gmail.com",
                 FirstName = "Emre",
                 LastName = "Arslan",
-                Password = "123",
-                PersonelInformation = "asdasdasdasdasdasd",
+                Password = "123",          
                 Phone = "054444444",
                 Photo = @"‪C:\Users\ASUS\Desktop\group.png",
                 SecurityQuestionID = 4,
                 SecurityAnswer = "asd",
-                Gender = true,
+                Gender = "Erkek",
                 IsActive = true,
                 UserName = "arslanemre",
                 IdentityNumber = "11111111113",
             });
-
+            context.SaveChanges();
             context.Patients.Add(new Patient()
             {
                 PatientID = 1,
@@ -273,22 +242,22 @@ namespace ForLife.DAL.Concrete.EntityFramework
                 BloodGroupID = 1,
                 ContactChannel = "Akadaş aracılığı ile",
                 CreateDate = DateTime.Now,
+                DonationDate = DateTime.Now,
                 DonationTypeID = 1,
                 Email = "karademir@gmail.com",
                 FirstName = "Fatih",
                 LastName = "Karademir",
-                Password = "123",
-                PersonelInformation = "asdasdasdasdasdasd",
+                Password = "123",                
                 Phone = "054444444",
                 Photo = @"‪C:\Users\ASUS\Desktop\group.png",
                 SecurityQuestionID = 4,
                 SecurityAnswer = "asd",
-                Gender = true,
+                Gender = "Erkek",
                 IsActive = true,
                 UserName = "karademir",
                 IdentityNumber = "11111111114",
             });
-
+            context.SaveChanges();
             context.Patients.Add(new Patient()
             {
                 PatientID = 2,
@@ -298,64 +267,37 @@ namespace ForLife.DAL.Concrete.EntityFramework
                 BloodGroupID = 1,
                 ContactChannel = "Akadaş aracılığı ile",
                 CreateDate = DateTime.Now,
+                DonationDate = DateTime.Now,
                 DonationTypeID = 1,
                 Email = "ftas@gmail.com",
                 FirstName = "Furkan",
                 LastName = "Taş",
-                Password = "123",
-                PersonelInformation = "asdasdasdasdasdasd",
+                Password = "123",                
                 Phone = "054444444",
                 Photo = @"‪C:\Users\ASUS\Desktop\group.png",
                 SecurityQuestionID = 4,
                 SecurityAnswer = "asd",
-                Gender = true,
+                Gender = "Erkek",
                 IsActive = true,
                 UserName = "frknts",
                 IdentityNumber = "11111111115",
             });
 
-            context.Settings.Add(new Setting()
-            {
-                SettingID=1,
-                logo = @"‪C:\Users\ASUS\Desktop\group.png",
-                Title = "asd",
-                Fax = "asd",
-                Phone = "55555",
-                Address = "asd",
-                Email = "asd",
-                Facebook = "asd",
-                Youtube = "asd",
-                Instagram = "asd",
-                GoogleMap = "asd",
-                LegalWarning = "asd",
-                LawLink = "asd",
-                DecreeLink = "asd",
-                CircularLink = "asd",
-                ReligionDecisionLink = "asd",
-                About = "asd",
-                Mission = "asd",
-                Vision = "asd",
-                HomeVideo = "asd",
-                FirstAside = "asd",
-                SecondAside = "asd",
-                VideoDescription="dasd"
-                
-            });
-
+            context.SaveChanges();
             context.PatientProfileSettings.Add(new PatientProfileSettings()
             {
-                PatientID=1,
-                isDispayBloodGroup=true,
-                isDisplayName=true,
-                isDisplayCity=true,
-                isDisplayCountry=true,
-                isDisplayDonationType=true,
-                isDisplayEmail=true,
-                isDisplayGender=true,
-                isDisplayGSM=true,
-                isDisplayLastName=true
+                PatientID = 1,
+                isDispayBloodGroup = true,
+                isDisplayName = true,
+                isDisplayCity = true,
+                isDisplayCountry = true,
+                isDisplayDonationType = true,
+                isDisplayEmail = true,
+                isDisplayGender = true,
+                isDisplayGSM = true,
+                isDisplayLastName = true
             });
-
+            context.SaveChanges();
             context.PatientProfileSettings.Add(new PatientProfileSettings()
             {
                 PatientID = 2,
@@ -369,7 +311,7 @@ namespace ForLife.DAL.Concrete.EntityFramework
                 isDisplayGSM = true,
                 isDisplayLastName = true
             });
-
+            context.SaveChanges();
             context.DonorProfileSettings.Add(new DonorProfileSettings()
             {
                 DonorID = 1,
@@ -383,7 +325,7 @@ namespace ForLife.DAL.Concrete.EntityFramework
                 isDisplayGSM = true,
                 isDisplayLastName = true
             });
-
+            context.SaveChanges();
             context.DonorProfileSettings.Add(new DonorProfileSettings()
             {
                 DonorID = 2,
@@ -397,7 +339,35 @@ namespace ForLife.DAL.Concrete.EntityFramework
                 isDisplayGSM = true,
                 isDisplayLastName = true
             });
+            context.SaveChanges();
+            context.Settings.Add(new Setting()
+            {
+                SettingID = 1,
+                logo = @"‪C:\Users\ASUS\Desktop\logo2.png",
+                Title = "asd",
+                Fax = "asd",
+                Phone = "55555",
+                Address = "asd",
+                Email = "asd",
+                Facebook = "asd",
+                Youtube = "asd",
+                Instagram = "asd",
+                GoogleMap = "asd",
+                LegalWarning = "üzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte metinler olarak kullanılmıştır. Beşyüz yıl boyunca varlığını sürdürmekle kalmamış, aynı zamanda pek değişmeden elektronik dizgiye de sıçramıştır. 1960'lardarı ile popüler olmuştur.",
+                LawLink = "asd",
+                DecreeLink = "asd",
+                CircularLink = "asd",
+                ReligionDecisionLink = "asd",
+                About = "üzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte metinler olarak kullanılmıştır. Beşyüz yıl boyunca varlığını sürdürmekle kalmamış, aymanda Aldus PageMaker gibi Lorem Ipsum sürümleri içeren masaüstü yayıncılık yazılımları ile popüler olmuştur.d",
+                Mission = "üzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte metirem Ipsum pasajları da içeren Letraset yapraklarının yayınlanması ile ve yakın zamanda Aldus PageMaker gibi Lorem Ipsum sürümleri içeren masaüstü yayıncılık yazılımları ile popüler olmuştur.d",
+                Vision = "aüzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte metinler olarak kullanılmıştır. Beşyüz yıl boyunca varlığını sürdürmekle kalmzamanda Aldus PageMaker gibi Lorem Ipsum sürümleri içeren masaüstü yayıncılık yazılımları ile popüler olmuştur.d",
+                HomeVideo = "asd",
+                FirstAside = "üzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte metinler olarak kullanılmıştır. Beşyüz yıl boyunca varlığını sürdürmeklın zamanda Aldus PageMaker gibi Lorem Ipsum sürümleri içeren masaüstü yayıncılık yazılımları ile popüler olmuştur.sd",
+                SecondAside = "aüzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri stanve yakın zamanda Aldus PageMaker gibi Lorem Ipsum sürümleri içeren masaüstü yayıncılık yazılımları ile popüler olmuştur.sd",
+                VideoDescription = "dasd"
 
+            });
+            context.SaveChanges();
             context.DonorProfileSettings.Add(new DonorProfileSettings()
             {
                 DonorID = 3,

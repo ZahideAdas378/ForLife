@@ -27,9 +27,10 @@ namespace ForLife.DAL.Concrete.EntityFramework.Mapping
                 .HasColumnType("char")
                 .HasMaxLength(11);
 
-            Property(a => a.Gender)
+                 Property(a => a.Gender)
                 .IsRequired()
-                .HasColumnType("bit");
+                .HasColumnType("nchar")
+                .HasMaxLength(8);
 
             Property(a => a.Photo)
                .IsRequired()
@@ -51,10 +52,8 @@ namespace ForLife.DAL.Concrete.EntityFramework.Mapping
             Property(a => a.ContactChannel)
              .IsRequired()
              .HasMaxLength(70);
-             
 
-            Property(a => a.PersonelInformation)
-              .IsRequired();
+
 
             Property(a => a.UserName)
              .IsRequired()
@@ -69,7 +68,7 @@ namespace ForLife.DAL.Concrete.EntityFramework.Mapping
               .IsRequired();
 
             Map(a => a.MapInheritedProperties());
-            
+
 
             Property(a => a.DonorID)
                 .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
@@ -78,13 +77,13 @@ namespace ForLife.DAL.Concrete.EntityFramework.Mapping
 
             HasRequired(a => a.BloodGroup)
                 .WithMany(a => a.Donors)
-                .HasForeignKey(a=>a.BloodGroupID);
+                .HasForeignKey(a => a.BloodGroupID);
 
             HasRequired(a => a.City)
                 .WithMany(a => a.Donors)
-                .HasForeignKey(a=>a.CityID);
+                .HasForeignKey(a => a.CityID);
 
-            
+
 
             HasRequired(a => a.SecurityQuestion)
                .WithMany(a => a.Donors)

@@ -17,6 +17,7 @@ namespace ForLifeUI.MVC.Controllers
         IBloodGroupService _bloodGroup;
         IDonationTypeService _donationTypeService;
         ISecurityQuestionService _securityQuestionService;
+        static HttpPostedFileBase _file;
         public PatientController(IPatientService patientService, ISettingService settingService, ICountryService countryService, ICityService cityService, IBloodGroupService bloodGroup, IDonationTypeService donationTypeService, ISecurityQuestionService securityQuestionService)
         {
             _patientService = patientService;
@@ -31,9 +32,12 @@ namespace ForLifeUI.MVC.Controllers
         // GET: Patient
         public ActionResult Index()
         {
+            List<SelectListItem> contacts = new List<SelectListItem> { new SelectListItem { Text = "İnternet" },new SelectListItem { Text="Reklam"}, new SelectListItem { Text = "Gazete" }, new SelectListItem { Text = "Dergi" } };
+
+            ViewBag.ContactChannel = contacts;
             return View();
         }
-        //[Filter.PatientFilter]
+        [Filter.PatientFilter]
         public ActionResult RegisterOne()
         {
             Patient patient = Session["patient"] as Patient;
@@ -41,7 +45,8 @@ namespace ForLifeUI.MVC.Controllers
             List<SelectListItem> countries = new List<SelectListItem>();
             List<SelectListItem> bloodGroups = new List<SelectListItem>();
             List<SelectListItem> donatationTypes = new List<SelectListItem>();
-
+            List<SelectListItem> genders = new List<SelectListItem> { new SelectListItem { Text = "Erkek", Value = "Erkek" }, new SelectListItem { Text = "Kadın", Value = "Kadın" } };
+            ViewBag.Gender = genders;
             foreach (var item in _countryService.GetAll())
             {
                 countries.Add(new SelectListItem{Text=item.CountryName,Value=item.CountryID.ToString() });
@@ -66,7 +71,7 @@ namespace ForLifeUI.MVC.Controllers
             return View(patient);
         }
 
-        //[Filter.PatientFilter]
+        [Filter.PatientFilter]
         public ActionResult RegisterTwo()
         {
             List<SelectListItem> securityQuestions = new List<SelectListItem>();
@@ -77,39 +82,59 @@ namespace ForLifeUI.MVC.Controllers
             ViewBag.SecurityQuestion = securityQuestions;
             return View();
         }
-        //[Filter.PatientFilter]
-        //public ActionResult LastRegister()
-        //{
+        [HttpPost]
+        public ActionResult PatientRegisterPost(Patient patient)
+        {
+            Session["patient"] = patient;
+            return RedirectToAction("RegisterOne", "Patient");
+        }
 
+        [HttpPost]
+        public ActionResult PatientRegisterPostOne(Patient patient)
+        {
             //Patient tempPatient = Session["patient"] as Patient;
-            //Uye tempuye = uye;
-            //tempuye.Type = true;
-            //_uyeService.Insert(tempuye);
-            //temphasta.UyeID = uye.ID;
-            //_hastaService.Insert(ResimEkle.GetUploadPhoto(temphasta,_file));
-            //Session["uye"] = null;
-            //Session["hasta"] = null;
+            //patient.FirstName = tempPatient.FirstName;
+            //patient.LastName = tempPatient.LastName;
+            //(Session["patient"] as Patient).FirstName = patient.FirstName;
+            //(Session["patient"] as Patient).LastName = patient.LastName;
+            //(Session["patient"] as Patient).Photo = patient.Photo;
+            //(Session["patient"] as Patient).BirthDate = patient.BirthDate;
+            //(Session["patient"] as Patient).ContactChannel = patient.ContactChannel;
+            //patient.ContactChannel = tempPatient.ContactChannel;
+
+            (Session["patient"] as Patient).IdentityNumber = patient.IdentityNumber;
+            (Session["patient"] as Patient).Address = patient.Address;
+            (Session["patient"] as Patient).Phone = patient.Phone;
+            (Session["patient"] as Patient).CityID = patient.CityID;
+            (Session["patient"] as Patient).DonationTypeID = patient.DonationTypeID;
+            (Session["patient"] as Patient).BloodGroupID = patient.BloodGroupID;
+            (Session["patient"] as Patient).DonationDate = patient.DonationDate;
+            (Session["patient"] as Patient).Gender = patient.Gender;
+            
+            return RedirectToAction("RegisterTwo", "Patient");
+        }
+        //[Filter.PatientFilter]
+        [HttpPost]
+        public ActionResult PatientRegisterPostTwo(Patient patient)
+        {
+            (Session["patient"] as Patient).UserName = patient.UserName;
+            (Session["patient"] as Patient).Password = patient.Password;
+            (Session["patient"] as Patient).SecurityQuestionID = patient.SecurityQuestionID;
+            (Session["patient"] as Patient).SecurityAnswer = patient.SecurityAnswer;
+            (Session["patient"] as Patient).IsActive = false;
+            (Session["patient"] as Patient).CreateDate = DateTime.Now;
+            //tempPatient.UserName = patient.UserName;
+            //tempPatient.Password = patient.Password;
+            //tempPatient.SecurityAnswer = patient.SecurityAnswer;
+            //tempPatient.SecurityQuestionID = patient.SecurityQuestionID;
+            _patientService.Insert((Session["patient"] as Patient));            
+            Session["patient"] = null;
             //Session["donor"] = null;
             //Session["donoronay"] = null;
-            //return RedirectToAction("Index", "Hasta");
-        //}
+            return RedirectToAction("Index", "Patient");
+        }
 
-        //[HttpPost]
-        //public ActionResult PatientRegisterPost(string isim, string soyisim)
-        //{
-        //    Session["hasta"] = new Hasta { Isim = isim, Soyisim = soyisim };
-        //    return RedirectToAction("Adim1", "Hasta");
-        //}
 
-        //[HttpPost]
-        //public ActionResult PatientRegisterPostTwo(Hasta hasta, HttpPostedFileBase file)
-        //{
-        //    Hasta temphasta = Session["hasta"] as Hasta;
-        //    _file = file;
-        //    hasta.Isim = temphasta.Isim;
-        //    hasta.Soyisim = temphasta.Soyisim;
-        //    Session["hasta"] = hasta;
-        //    return RedirectToAction("Adim2", "Hasta");
-        //}
+     
     }
 }

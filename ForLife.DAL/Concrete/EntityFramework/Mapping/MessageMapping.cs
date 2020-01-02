@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace ForLife.DAL.Concrete.EntityFramework.Mapping
 {
-    class MessageMapping:EntityTypeConfiguration<Message>
+    class MessageMapping : EntityTypeConfiguration<Message>
     {
         public MessageMapping()
         {
-            HasKey(a=>a.MessageID);
+            HasKey(a => a.MessageID);
             Property(a => a.MessageDetails)
                 .HasMaxLength(500);
 
